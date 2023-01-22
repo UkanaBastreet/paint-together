@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body,
+#root,
+.App,
+.Canvas {
+  height: 100%;
+}
+.Canvas {
+  canvas {
+    display: block;
+    background-color: rosybrown;
+    height: 100%;
+    width: 100%;
+  }
+}
+.Toolbar {
+  width: 280px;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  margin-right: -140px;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 0 0 7px 7px;
+  .tool {
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    background: no-repeat center;
+    cursor: pointer;
+    margin-left: 4px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  .active {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .brush {
+    background-image: url("../assets/brush.png");
+  }
+  .circle {
+    background-image: url("../assets/circle.png");
+  }
+  .eraser {
+    background-image: url("../assets/eraser.png");
+  }
+  .line {
+    background-image: url("../assets/line.png");
+  }
+  .rect {
+    background-image: url("../assets/rect.png");
+  }
+  .redo {
+    background-image: url("../assets/redo.png");
+  }
+  .save {
+    background-image: url("../assets/save.png");
+  }
+  .undo {
+    background-image: url("../assets/undo.png");
+  }
+}
