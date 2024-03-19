@@ -1,13 +1,14 @@
-import Canvas from "./components/Canvas"
-import Toolbar from "./components/Toolbar"
+import React from "react";
+import Canvas from "./components/Canvas";
+import Toolbar from "./components/Toolbar";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Toolbar />
       <Canvas />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
