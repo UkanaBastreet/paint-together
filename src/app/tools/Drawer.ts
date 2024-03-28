@@ -1,7 +1,4 @@
 export class Drawer {
-  static drawFigure(drawFigure) {
-    throw new Error("Method not implemented.");
-  }
   constructor(
     private canvas: HTMLCanvasElement,
     private ctx: CanvasRenderingContext2D
@@ -32,10 +29,8 @@ export class Drawer {
     this.ctx.stroke();
     this.ctx.closePath();
   }
-  drawWithBrush(start: ICoords[], end: ICoords) {
-    
-  }
-  draw = ([start, next]) => {
+  drawWithBrush(start: ICoords[], end: ICoords) {}
+  draw([start, next]) {
     this.ctx.beginPath();
     // coords.reduce((start, next) => {
     this.ctx.moveTo(...start);
@@ -44,7 +39,7 @@ export class Drawer {
     // })
     this.ctx.stroke();
     this.ctx.closePath();
-  };
+  }
   set lineWidth(width) {
     this.ctx.lineWidth = width;
     this.ctx.save();
