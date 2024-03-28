@@ -1,6 +1,6 @@
-import { useEffect, useRef } from "react";
-import useWindowDimensions from "../app/hooks/useDimensions";
-import canvasState from "../app/store/canvasState";
+import React, { useEffect, useRef } from "react";
+import useWindowDimensions from "../app/hooks/useDimensions.ts";
+import canvasState from "../app/store/canvasState.ts";
 
 const Canvas = () => {
   const canvasRef = useRef(null);
@@ -10,11 +10,12 @@ const Canvas = () => {
     if (canvasRef.current) {
       canvasState.setCanvas(canvasRef.current);
     }
-    window.canvasState = canvasState;
-    canvasState.drawer.lineWidth = 50;
-    canvasState.drawer.fillStyle = "red";
-    canvasState.drawer.strokeStyle = "rgba(13, 48, 102, 0.1)";
-    canvasState.drawer.lineCap = "round";
+    // window.canvasState = canvasState;
+    if (!canvasState.drawer) return;
+    // canvasState.drawer.lineWidth = 50;
+    // canvasState.drawer.fillStyle = "red";
+    // canvasState.drawer.strokeStyle = "rgba(13, 48, 102, 0.1)";
+    // canvasState.drawer.lineCap = "round";
 
     return () => {
       clean(canvasRef, canvasState);

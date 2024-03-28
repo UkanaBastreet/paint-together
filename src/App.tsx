@@ -1,6 +1,6 @@
 import React from "react";
-import Canvas from "./components/Canvas";
-import Toolbar from "./components/Toolbar";
+import Canvas from "./components/Canvas.tsx";
+import Toolbar from "./components/Toolbar.tsx";
 
 const App = () => {
   return (

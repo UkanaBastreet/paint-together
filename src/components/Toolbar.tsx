@@ -1,3 +1,5 @@
+import React from "react";
+
 const Toolbar = () => {
   return (
     <>
@@ -12,14 +14,14 @@ const Toolbar = () => {
         <div className="tool redo"></div>
       </span>
     </>
-  )
-}
-export default Toolbar
+  );
+};
+export default Toolbar;
 
 const ToolbarItem = ({ className, setTool, tool }) => {
   return (
     <>
       <div className={"tool " + className}></div>
     </>
-  )
-}
+  );
+};
