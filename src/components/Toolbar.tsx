@@ -18,10 +18,3 @@ const Toolbar = () => {
 };
 export default Toolbar;
 
-const ToolbarItem = ({ className, setTool, tool }) => {
-  return (
-    <>
-      <div className={"tool " + className}></div>
-    </>
-  );
-};
